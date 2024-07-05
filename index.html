@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reloj Neon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: inherit;
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 62.5%;
+      }
+
+      html body {
+        font-size: 1.6rem;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex; /* Utiliza Flexbox para el layout */
+        flex-direction: column; /* Establece la dirección del layout en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+      }
+
+      ul {
+        list-style: none; /* Elimina los estilos predeterminados de la lista */
+      }
+
+      a,
+      a:link,
+      a:visited {
+        text-decoration: none; /* Elimina la decoración de texto de los enlaces */
+      }
+
+      .safari {
+        .digit span {
+          transition: none !important; /* Desactiva las transiciones para la clase safari */
+
+          &::before {
+            content: ""; /* Añade un contenido vacío antes del elemento */
+            position: absolute; /* Posiciona el elemento de forma absoluta */
+            display: block; /* Hace que el elemento se comporte como un bloque */
+            width: 400%; /* Establece el ancho del elemento en 400% */
+            height: 400%; /* Establece la altura del elemento en 400% */
+            top: 0; /* Posiciona el elemento en la parte superior */
+            left: 0; /* Posiciona el elemento en la parte izquierda */
+            transform: translate(
+              -50%,
+              -50%
+            ); /* Traslada el elemento para centrarlo */
+          }
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main></main>
+    <script src="main.js"></script>
+  </body>
+</html>
